@@ -9,4 +9,16 @@ import { Cliente } from '../models/cliente';
 export class ClienteComponent {
   @Input()
   cliente?: Cliente;
+
+  getMaggiore(cliente:any){
+    return{
+      'text-yellow': cliente.amount>700
+    }
+  }
+ 
+  
 }
+
+
+
+

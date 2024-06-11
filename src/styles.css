@@ -4,3 +4,6 @@ body{
     padding: 0;
     max-width: 1024px;
 }
+p, h1{
+    text-align: center;
+}

@@ -1,12 +1,13 @@
-<div
+<div 
   *ngIf="cliente != undefined"
-  style="background-color: lightgray; padding: 1rem; margin: 1px; width: 300px"
+  style="padding: 1rem; margin: 1px; width: 300px; border: 1px solid black;"
+
 >
-  <h3></h3>
-  <p>{{ cliente.business }}</p>
+  
+  <strong><p>{{ cliente.business | uppercase}}</p></strong>
   <p>{{ cliente.name }}</p>
   <p>{{ cliente.account }}</p>
   <p>{{ cliente.date | date : "longDate" }}</p>
   <p>{{ cliente.type }}</p>
-  <p>{{ cliente.amount | currency : "EUR" }}</p>
+  <p [ngClass]="getMaggiore(cliente)">{{ cliente.amount | currency : "EUR" }}</p>
 </div>
